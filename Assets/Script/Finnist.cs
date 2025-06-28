@@ -1,7 +1,9 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Finnist : MonoBehaviour
 {
+    [SerializeField] float timeDelays = 2f;
+    [SerializeField] ParticleSystem praticleFinist;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +20,12 @@ public class Finnist : MonoBehaviour
         if (col.tag == "Player")
         {
             Debug.Log("da va cham cot");
+            praticleFinist.Play();
+            Invoke("LoadScene", timeDelays);
         }
+    }
+    void LoadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
