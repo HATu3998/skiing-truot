@@ -19,6 +19,7 @@ public class Crash : MonoBehaviour
     {
         if(col.tag == "Ground")
         {
+            FindFirstObjectByType<Controller>().CheckBool();
             Debug.Log("da cham vao dau");
             praticleFinist.Play();
             //ham invoke delay thoi gian lai 2s

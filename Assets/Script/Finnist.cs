@@ -20,6 +20,7 @@ public class Finnist : MonoBehaviour
         if (col.tag == "Player")
         {
             Debug.Log("da va cham cot");
+            GetComponent<AudioSource>().Play();
             praticleFinist.Play();
             Invoke("LoadScene", timeDelays);
         }
